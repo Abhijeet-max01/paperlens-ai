@@ -1,0 +1,212 @@
+[
+  {
+    "id": "pair_01",
+    "domain": "NLP / Attention",
+    "claim_a": "Full self-attention scales quadratically O(N^2) with respect to input sequence length, becoming computationally prohibitive for long documents.",
+    "claim_b": "Self-attention operations require quadratic computational time and memory as sequence length increases.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_02",
+    "domain": "NLP / Attention",
+    "claim_a": "Full self-attention scales quadratically O(N^2) with respect to input sequence length, becoming computationally prohibitive for long documents.",
+    "claim_b": "Linear attention variants reduce the computational complexity of self-attention to strictly linear O(N) memory scaling.",
+    "ground_truth": "NEUTRAL"
+  },
+  {
+    "id": "pair_03",
+    "domain": "NLP / Attention",
+    "claim_a": "Standard full self-attention maintains strictly linear computational complexity with respect to document length.",
+    "claim_b": "Standard full self-attention exhibits quadratic complexity O(N^2) as sequence length scales.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_04",
+    "domain": "Deep Learning / ResNet",
+    "claim_a": "Residual skip connections mitigate the vanishing gradient problem in very deep neural architectures.",
+    "claim_b": "Deep convolutional networks with identity shortcut connections effectively alleviate vanishing gradients during backpropagation.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_05",
+    "domain": "Deep Learning / ResNet",
+    "claim_a": "Residual connections accelerate the degradation of gradients, leading to severe vanishing gradients in networks over 50 layers.",
+    "claim_b": "Residual connections enable the effective training of neural networks with over 100 layers by addressing vanishing gradients.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_06",
+    "domain": "NLP / Pretraining",
+    "claim_a": "Masked language modeling objectives enable bidirectional contextual representation learning across all layers.",
+    "claim_b": "Bidirectional contextual embeddings are learned effectively through masked token prediction during pretraining.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_07",
+    "domain": "NLP / Pretraining",
+    "claim_a": "Unidirectional autoregressive models are structurally incapable of conditioning on future tokens during masked token pretraining.",
+    "claim_b": "Autoregressive language models generate tokens sequentially from left to right using causal attention masks.",
+    "ground_truth": "NEUTRAL"
+  },
+  {
+    "id": "pair_08",
+    "domain": "NLP / Quantization",
+    "claim_a": "Post-training 4-bit quantization causes severe perplexity degradation on reasoning benchmarks exceeding 25%.",
+    "claim_b": "Post-training 4-bit quantization preserves reasoning benchmark perplexity within 1% of full 16-bit precision.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_09",
+    "domain": "NLP / Quantization",
+    "claim_a": "4-bit weight-only quantization substantially decreases GPU VRAM consumption while maintaining model performance.",
+    "claim_b": "Reducing weight precision to 4 bits reduces memory footprint by up to 70% with negligible loss in accuracy.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_10",
+    "domain": "Computer Vision / ViT",
+    "claim_a": "Vision Transformers lack the inductive bias of translation equivariance present in convolutional neural networks.",
+    "claim_b": "Unlike CNNs, Vision Transformers do not inherently possess translation equivariance across image patches.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_11",
+    "domain": "Computer Vision / ViT",
+    "claim_a": "Vision Transformers possess strong intrinsic translation equivariance and locality biases without requiring large-scale pretraining.",
+    "claim_b": "Vision Transformers lack intrinsic locality and translation equivariance, requiring large-scale pretraining to match CNN performance.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_12",
+    "domain": "Optimization / Adam",
+    "claim_a": "Adam optimizer with weight decay decoupling (AdamW) outperforms standard Adam in generalization error.",
+    "claim_b": "Decoupling weight decay from the gradient update improves generalization compared to L2 regularized Adam.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_13",
+    "domain": "Optimization / SGD",
+    "claim_a": "Stochastic gradient descent with momentum always fails to converge on non-convex objective surfaces.",
+    "claim_b": "SGD with momentum demonstrates reliable convergence on non-convex deep learning objectives.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_14",
+    "domain": "NLP / Retrieval",
+    "claim_a": "Dense retrieval models using bi-encoder representations achieve higher recall than BM25 on semantic paraphrasing queries.",
+    "claim_b": "Bi-encoder dense vector representations capture semantic paraphrasing more effectively than sparse lexical matching.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_15",
+    "domain": "NLP / Retrieval",
+    "claim_a": "BM25 keyword search consistently outperforms dense bi-encoder models on exact entity identifier and product code lookups.",
+    "claim_b": "Dense embedding retrieval models achieve superior exact-match accuracy over BM25 on random alphanumeric serial numbers.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_16",
+    "domain": "Reinforcement Learning / PPO",
+    "claim_a": "Proximal Policy Optimization limits policy updates using a clipped surrogate objective to prevent destructively large updates.",
+    "claim_b": "PPO uses a clipped surrogate objective function to ensure training stability and prevent oversized policy updates.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_17",
+    "domain": "Reinforcement Learning / RLHF",
+    "claim_a": "Direct Preference Optimization completely eliminates the necessity of training a separate reward model.",
+    "claim_b": "DPO implicitly optimizes the policy against the preference data without fitting an explicit reward model network.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_18",
+    "domain": "Reinforcement Learning / RLHF",
+    "claim_a": "Direct Preference Optimization requires training a separate 70-billion-parameter reward model network prior to policy alignment.",
+    "claim_b": "Direct Preference Optimization eliminates the need for a separate reward model network during preference alignment.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_19",
+    "domain": "NLP / MoE",
+    "claim_a": "Mixture-of-Experts architectures activate a sparse subset of expert parameters per token, reducing inference FLOPs relative to total parameter count.",
+    "claim_b": "Sparse MoE models route each token to a small subset of experts, yielding high total parameter capacity with lower computational cost.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_20",
+    "domain": "NLP / MoE",
+    "claim_a": "Sparse Mixture-of-Experts models require executing every single expert parameter for every input token.",
+    "claim_b": "MoE architectures route each token to only top-k active experts, keeping the remaining parameters dormant.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_21",
+    "domain": "Deep Learning / Dropout",
+    "claim_a": "Dropout randomly deactivates activations during training to prevent co-adaptation of feature detectors.",
+    "claim_b": "Random zeroing of neural activations during forward training passes reduces overfitting by mitigating feature co-dependence.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_22",
+    "domain": "Deep Learning / LayerNorm",
+    "claim_a": "Pre-Layer Normalization stabilizes gradient flow through deep Transformer residual blocks compared to Post-Layer Normalization.",
+    "claim_b": "Post-LN Transformers require learning rate warmup to avoid gradient explosion during the initial phases of training.",
+    "ground_truth": "NEUTRAL"
+  },
+  {
+    "id": "pair_23",
+    "domain": "Deep Learning / LayerNorm",
+    "claim_a": "Post-Layer Normalization completely eliminates the need for warm-up steps and enables instant maximum learning rate convergence.",
+    "claim_b": "Post-LN architectures are prone to gradient divergence at initialization and typically require learning rate warmup.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_24",
+    "domain": "Computer Vision / Diffusion",
+    "claim_a": "Denoising diffusion probabilistic models generate images by iteratively reversing a Markovian noise degradation process.",
+    "claim_b": "Diffusion generative models synthesize samples by learning to reverse gradual Gaussian noise perturbation steps.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_25",
+    "domain": "Computer Vision / Diffusion",
+    "claim_a": "Diffusion models synthesize high-resolution images in a single forward pass without iterative denoising steps.",
+    "claim_b": "Standard diffusion models require multiple sequential sampling steps to reverse the noise diffusion trajectory.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_26",
+    "domain": "NLP / Chain-of-Thought",
+    "claim_a": "Chain-of-thought prompting improves multi-step mathematical reasoning accuracy in large language models.",
+    "claim_b": "Prompting language models to produce intermediate reasoning steps enhances problem-solving performance on arithmetic tasks.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_27",
+    "domain": "NLP / Fine-Tuning",
+    "claim_a": "Low-Rank Adaptation (LoRA) freezes pretrained model weights and injects trainable rank decomposition matrices into attention layers.",
+    "claim_b": "LoRA parameter-efficient fine-tuning trains low-rank matrix pairs while keeping the underlying foundation model weights fixed.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_28",
+    "domain": "NLP / Fine-Tuning",
+    "claim_a": "LoRA fine-tuning requires updating and storing full gradient states for 100% of the foundation model's parameter weights.",
+    "claim_b": "LoRA freezes the original model parameters and optimizes only small low-rank adapter matrices.",
+    "ground_truth": "CONTRADICTION"
+  },
+  {
+    "id": "pair_29",
+    "domain": "NLP / Hallucination",
+    "claim_a": "Retrieval-Augmented Generation grounds model responses in external evidence documents, reducing factual hallucination rates.",
+    "claim_b": "Providing relevant retrieved context to the model prompt decreases unsupported factual assertions in generated outputs.",
+    "ground_truth": "ENTAILMENT"
+  },
+  {
+    "id": "pair_30",
+    "domain": "NLP / Hallucination",
+    "claim_a": "Retrieval-Augmented Generation completely guarantees 0% hallucination rate across all complex speculative queries.",
+    "claim_b": "RAG reduces factual errors but models can still misinterpret retrieved passages or hallucinate unsupported inferences.",
+    "ground_truth": "CONTRADICTION"
+  }
+]
