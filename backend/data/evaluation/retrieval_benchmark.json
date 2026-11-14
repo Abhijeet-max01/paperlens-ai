@@ -1,0 +1,78 @@
+{
+  "corpus": [
+    {
+      "id": "doc_attn_complexity",
+      "text": "Self-attention has quadratic time and space complexity O(n^2) with respect to the sequence length n, creating a computational bottleneck when processing long document contexts."
+    },
+    {
+      "id": "doc_resnet_gradient",
+      "text": "Deep residual learning addresses the vanishing gradient degradation problem by introducing identity shortcut connections, allowing gradients to flow unimpeded through hundreds of layers."
+    },
+    {
+      "id": "doc_quant_4bit",
+      "text": "Post-training quantization compresses large language models into 4-bit precision, substantially reducing GPU VRAM memory footprint while preserving task accuracy."
+    },
+    {
+      "id": "doc_dpo_preference",
+      "text": "Direct Preference Optimization (DPO) optimizes policy models directly from human preference data using an implicit reward formulation without training a separate reward model."
+    },
+    {
+      "id": "doc_moe_routing",
+      "text": "Sparse Mixture-of-Experts (MoE) architectures route each input token to top-k selected expert sub-networks, dramatically expanding parameter capacity while maintaining constant FLOPs per token."
+    },
+    {
+      "id": "doc_diffusion_denoising",
+      "text": "Diffusion probabilistic models learn the reverse Markovian trajectory to progressively remove Gaussian noise from degraded inputs to synthesize high-fidelity continuous data."
+    },
+    {
+      "id": "doc_lora_peft",
+      "text": "Low-Rank Adaptation (LoRA) freezes the pre-trained weights and injects trainable rank decomposition matrices into each transformer layer, reducing trainable parameters by over 99%."
+    },
+    {
+      "id": "doc_rag_grounding",
+      "text": "Retrieval-Augmented Generation (RAG) grounds language model generations in external authoritative passages, mitigating hallucinations and providing verifiable page-level provenance citations."
+    },
+    {
+      "id": "doc_distractor_sql",
+      "text": "Relational databases utilize B-tree indexes and write-ahead logging to guarantee ACID transactions and fast relational query planning across normalized relational schemas."
+    },
+    {
+      "id": "doc_distractor_agile",
+      "text": "Pair programming in agile software engineering pairs a driver and navigator at a single workstation to conduct continuous peer code review and collaborative problem solving."
+    }
+  ],
+  "queries": [
+    {
+      "query": "quadratic complexity of self attention in transformers",
+      "relevant_corpus_ids": ["doc_attn_complexity"]
+    },
+    {
+      "query": "vanishing gradient mitigation using residual connections",
+      "relevant_corpus_ids": ["doc_resnet_gradient"]
+    },
+    {
+      "query": "post training quantization memory reduction 4 bit",
+      "relevant_corpus_ids": ["doc_quant_4bit"]
+    },
+    {
+      "query": "direct preference optimization without reward model",
+      "relevant_corpus_ids": ["doc_dpo_preference"]
+    },
+    {
+      "query": "sparse mixture of experts parameter routing",
+      "relevant_corpus_ids": ["doc_moe_routing"]
+    },
+    {
+      "query": "diffusion models reverse markovian denoising",
+      "relevant_corpus_ids": ["doc_diffusion_denoising"]
+    },
+    {
+      "query": "parameter efficient fine tuning low rank adaptation",
+      "relevant_corpus_ids": ["doc_lora_peft"]
+    },
+    {
+      "query": "retrieval augmented generation hallucination reduction",
+      "relevant_corpus_ids": ["doc_rag_grounding"]
+    }
+  ]
+}
